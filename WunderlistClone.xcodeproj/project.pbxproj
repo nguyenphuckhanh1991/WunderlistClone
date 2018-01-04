@@ -9,11 +9,25 @@
 /* Begin PBXBuildFile section */
 		2C8C09D1E6AA945A9B9FF151 /* Pods_WunderlistCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E304906A5AA4530D7A2A05 /* Pods_WunderlistCloneTests.framework */; };
 		A4174E73FB4F24AF8B444EA8 /* Pods_WunderlistCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27743F0DE53942942C2F68A2 /* Pods_WunderlistCloneUITests.framework */; };
+		B782F8531FFE157E00F03788 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782F8521FFE157E00F03788 /* Login.storyboard */; };
+		B782F8551FFE17C700F03788 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8541FFE17C700F03788 /* SignInViewController.swift */; };
+		B782F8571FFE1F0400F03788 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8561FFE1F0400F03788 /* MainTabBarController.swift */; };
+		B782F8591FFE1F0C00F03788 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8581FFE1F0C00F03788 /* StartViewController.swift */; };
+		B782F85B1FFE1F1200F03788 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F85A1FFE1F1200F03788 /* BaseNavigationController.swift */; };
+		B782F8621FFE1FF900F03788 /* CustomButtonUpdateStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F85D1FFE1FF900F03788 /* CustomButtonUpdateStatus.swift */; };
+		B782F8631FFE1FF900F03788 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F85E1FFE1FF900F03788 /* CustomSearchBar.swift */; };
+		B782F8641FFE1FF900F03788 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F85F1FFE1FF900F03788 /* CustomButton.swift */; };
+		B782F8651FFE1FF900F03788 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8601FFE1FF900F03788 /* CustomTextField.swift */; };
+		B782F8661FFE1FF900F03788 /* CustomLabelAddPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8611FFE1FF900F03788 /* CustomLabelAddPhoto.swift */; };
+		B782F86A1FFE209700F03788 /* InputResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8671FFE209700F03788 /* InputResult.swift */; };
+		B782F86B1FFE209700F03788 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8681FFE209700F03788 /* View.swift */; };
+		B782F86C1FFE209700F03788 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F8691FFE209700F03788 /* AppKey.swift */; };
+		B782F86E1FFE279000F03788 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F86D1FFE279000F03788 /* CustomView.swift */; };
+		B782F8701FFE3DDB00F03788 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F86F1FFE3DDB00F03788 /* CustomImageView.swift */; };
 		B7D9B5C21FFDCA8100419877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C11FFDCA8100419877 /* AppDelegate.swift */; };
 		B7D9B5C41FFDCA8100419877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C31FFDCA8100419877 /* ViewController.swift */; };
 		B7D9B5C71FFDCA8100419877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B5C51FFDCA8100419877 /* Main.storyboard */; };
 		B7D9B5CA1FFDCA8100419877 /* WunderlistClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C81FFDCA8100419877 /* WunderlistClone.xcdatamodeld */; };
-		B7D9B5CC1FFDCA8100419877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B5CB1FFDCA8100419877 /* Assets.xcassets */; };
 		B7D9B5CF1FFDCA8100419877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B5CD1FFDCA8100419877 /* LaunchScreen.storyboard */; };
 		B7D9B5DA1FFDCA8200419877 /* WunderlistCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5D91FFDCA8200419877 /* WunderlistCloneTests.swift */; };
 		B7D9B5E51FFDCA8200419877 /* WunderlistCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5E41FFDCA8200419877 /* WunderlistCloneUITests.swift */; };
@@ -23,6 +37,9 @@
 		B7D9B60D1FFDD21C00419877 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B6091FFDD21C00419877 /* String.swift */; };
 		B7D9B61B1FFDD40400419877 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B6191FFDD40400419877 /* MainViewController.swift */; };
 		B7D9B61C1FFDD40400419877 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B61A1FFDD40400419877 /* BaseViewController.swift */; };
+		B7D9B6221FFE09EF00419877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B6211FFE09EF00419877 /* Assets.xcassets */; };
+		B7D9B6241FFE0EE400419877 /* MainSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B6231FFE0EE400419877 /* MainSignInViewController.swift */; };
+		B7D9B6261FFE0EEF00419877 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B6251FFE0EEF00419877 /* SignUpViewController.swift */; };
 		C6960DEB05D34C3F87E95E38 /* Pods_WunderlistClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C321928FD4509675E627261 /* Pods_WunderlistClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,12 +68,26 @@
 		6C321928FD4509675E627261 /* Pods_WunderlistClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderlistClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74ACAE1800A8A174157C51C8 /* Pods-WunderlistCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderlistCloneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderlistCloneUITests/Pods-WunderlistCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D69D624FCE5EBEF354DA26C /* Pods-WunderlistClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderlistClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderlistClone/Pods-WunderlistClone.release.xcconfig"; sourceTree = "<group>"; };
+		B782F8521FFE157E00F03788 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B782F8541FFE17C700F03788 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B782F8561FFE1F0400F03788 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B782F8581FFE1F0C00F03788 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B782F85A1FFE1F1200F03788 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		B782F85D1FFE1FF900F03788 /* CustomButtonUpdateStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonUpdateStatus.swift; sourceTree = "<group>"; };
+		B782F85E1FFE1FF900F03788 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		B782F85F1FFE1FF900F03788 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B782F8601FFE1FF900F03788 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		B782F8611FFE1FF900F03788 /* CustomLabelAddPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabelAddPhoto.swift; sourceTree = "<group>"; };
+		B782F8671FFE209700F03788 /* InputResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputResult.swift; sourceTree = "<group>"; };
+		B782F8681FFE209700F03788 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B782F8691FFE209700F03788 /* AppKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
+		B782F86D1FFE279000F03788 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		B782F86F1FFE3DDB00F03788 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		B7D9B5BE1FFDCA8100419877 /* WunderlistClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderlistClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D9B5C11FFDCA8100419877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D9B5C31FFDCA8100419877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7D9B5C61FFDCA8100419877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7D9B5C91FFDCA8100419877 /* WunderlistClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WunderlistClone.xcdatamodel; sourceTree = "<group>"; };
-		B7D9B5CB1FFDCA8100419877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7D9B5CE1FFDCA8100419877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7D9B5D01FFDCA8100419877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D9B5D51FFDCA8200419877 /* WunderlistCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderlistCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +102,9 @@
 		B7D9B6091FFDD21C00419877 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		B7D9B6191FFDD40400419877 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B7D9B61A1FFDD40400419877 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B7D9B6211FFE09EF00419877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7D9B6231FFE0EE400419877 /* MainSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSignInViewController.swift; sourceTree = "<group>"; };
+		B7D9B6251FFE0EEF00419877 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E5AE5B6C101B62AC8E629F82 /* Pods-WunderlistClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderlistClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderlistClone/Pods-WunderlistClone.debug.xcconfig"; sourceTree = "<group>"; };
 		F8C15CDF5AAFA1C011EC680B /* Pods-WunderlistCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderlistCloneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderlistCloneUITests/Pods-WunderlistCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +145,20 @@
 				27743F0DE53942942C2F68A2 /* Pods_WunderlistCloneUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B782F85C1FFE1FDD00F03788 /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				B782F85F1FFE1FF900F03788 /* CustomButton.swift */,
+				B782F85D1FFE1FF900F03788 /* CustomButtonUpdateStatus.swift */,
+				B782F8611FFE1FF900F03788 /* CustomLabelAddPhoto.swift */,
+				B782F85E1FFE1FF900F03788 /* CustomSearchBar.swift */,
+				B782F8601FFE1FF900F03788 /* CustomTextField.swift */,
+				B782F86D1FFE279000F03788 /* CustomView.swift */,
+				B782F86F1FFE3DDB00F03788 /* CustomImageView.swift */,
+			);
+			path = Designable;
 			sourceTree = "<group>";
 		};
 		B7D9B5B51FFDCA8100419877 = {
@@ -172,8 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				B7D9B5D01FFDCA8100419877 /* Info.plist */,
-				B7D9B5CB1FFDCA8100419877 /* Assets.xcassets */,
 				B7D9B5C81FFDCA8100419877 /* WunderlistClone.xcdatamodeld */,
+				B7D9B6211FFE09EF00419877 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +238,9 @@
 		B7D9B5F41FFDD1D800419877 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				B782F8691FFE209700F03788 /* AppKey.swift */,
+				B782F8671FFE209700F03788 /* InputResult.swift */,
+				B782F8681FFE209700F03788 /* View.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -248,6 +299,7 @@
 			children = (
 				B7D9B5C51FFDCA8100419877 /* Main.storyboard */,
 				B7D9B5CD1FFDCA8100419877 /* LaunchScreen.storyboard */,
+				B782F8521FFE157E00F03788 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -256,6 +308,9 @@
 			isa = PBXGroup;
 			children = (
 				B7D9B5C31FFDCA8100419877 /* ViewController.swift */,
+				B7D9B6231FFE0EE400419877 /* MainSignInViewController.swift */,
+				B782F8541FFE17C700F03788 /* SignInViewController.swift */,
+				B7D9B6251FFE0EEF00419877 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +318,7 @@
 		B7D9B6171FFDD3EF00419877 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B782F85C1FFE1FDD00F03788 /* Designable */,
 				B7D9B6181FFDD3F700419877 /* Controllers */,
 			);
 			path = Core;
@@ -271,6 +327,9 @@
 		B7D9B6181FFDD3F700419877 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B782F85A1FFE1F1200F03788 /* BaseNavigationController.swift */,
+				B782F8581FFE1F0C00F03788 /* StartViewController.swift */,
+				B782F8561FFE1F0400F03788 /* MainTabBarController.swift */,
 				B7D9B61A1FFDD40400419877 /* BaseViewController.swift */,
 				B7D9B6191FFDD40400419877 /* MainViewController.swift */,
 			);
@@ -406,8 +465,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B782F8531FFE157E00F03788 /* Login.storyboard in Resources */,
 				B7D9B5CF1FFDCA8100419877 /* LaunchScreen.storyboard in Resources */,
-				B7D9B5CC1FFDCA8100419877 /* Assets.xcassets in Resources */,
+				B7D9B6221FFE09EF00419877 /* Assets.xcassets in Resources */,
 				B7D9B5C71FFDCA8100419877 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,7 +559,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderlistClone/Pods-WunderlistClone-frameworks.sh\"\n";
 		};
 		7CF3313FC5EC144970F3E55C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -594,15 +654,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D9B6261FFE0EEF00419877 /* SignUpViewController.swift in Sources */,
+				B782F8591FFE1F0C00F03788 /* StartViewController.swift in Sources */,
+				B782F8641FFE1FF900F03788 /* CustomButton.swift in Sources */,
 				B7D9B60C1FFDD21C00419877 /* UIViewController.swift in Sources */,
 				B7D9B5CA1FFDCA8100419877 /* WunderlistClone.xcdatamodeld in Sources */,
+				B782F8651FFE1FF900F03788 /* CustomTextField.swift in Sources */,
 				B7D9B5C41FFDCA8100419877 /* ViewController.swift in Sources */,
 				B7D9B5C21FFDCA8100419877 /* AppDelegate.swift in Sources */,
 				B7D9B60B1FFDD21C00419877 /* Color.swift in Sources */,
+				B782F86E1FFE279000F03788 /* CustomView.swift in Sources */,
+				B782F8621FFE1FF900F03788 /* CustomButtonUpdateStatus.swift in Sources */,
+				B782F86C1FFE209700F03788 /* AppKey.swift in Sources */,
+				B782F8661FFE1FF900F03788 /* CustomLabelAddPhoto.swift in Sources */,
 				B7D9B61C1FFDD40400419877 /* BaseViewController.swift in Sources */,
+				B782F86A1FFE209700F03788 /* InputResult.swift in Sources */,
+				B782F85B1FFE1F1200F03788 /* BaseNavigationController.swift in Sources */,
+				B782F8571FFE1F0400F03788 /* MainTabBarController.swift in Sources */,
 				B7D9B60A1FFDD21C00419877 /* Font.swift in Sources */,
+				B782F8551FFE17C700F03788 /* SignInViewController.swift in Sources */,
 				B7D9B60D1FFDD21C00419877 /* String.swift in Sources */,
+				B7D9B6241FFE0EE400419877 /* MainSignInViewController.swift in Sources */,
 				B7D9B61B1FFDD40400419877 /* MainViewController.swift in Sources */,
+				B782F86B1FFE209700F03788 /* View.swift in Sources */,
+				B782F8631FFE1FF900F03788 /* CustomSearchBar.swift in Sources */,
+				B782F8701FFE3DDB00F03788 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +844,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5AE5B6C101B62AC8E629F82 /* Pods-WunderlistClone.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GRCRJCWSL;
 				INFOPLIST_FILE = "$(SRCROOT)/WunderlistClone/Resources/Info.plist";
@@ -784,6 +861,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D69D624FCE5EBEF354DA26C /* Pods-WunderlistClone.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GRCRJCWSL;
 				INFOPLIST_FILE = "$(SRCROOT)/WunderlistClone/Resources/Info.plist";
