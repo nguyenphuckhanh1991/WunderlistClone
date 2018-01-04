@@ -67,8 +67,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
-iOSTranning112017Tests/
-iOSTranning112017UITests/
+WunderlistCloneTests/
+WunderlistCloneUITests/
 Podfile.lock
 
 .env
