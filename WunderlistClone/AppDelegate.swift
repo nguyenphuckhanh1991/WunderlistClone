@@ -8,14 +8,15 @@
 
 import UIKit
 import UserNotifications
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
-    
     var window: UIWindow?
     let dataModel = DataModel()
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.sharedManager().enable = true
+
 //        let navigationController = window!.rootViewController
 //           as! UINavigationController
 //        let controller = navigationController.viewControllers[0]
@@ -23,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        controller.dataModel = dataModel
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) {
-            granted, error in
+            (granted, error) in
             if granted {
                 print("We have permission")
             } else {

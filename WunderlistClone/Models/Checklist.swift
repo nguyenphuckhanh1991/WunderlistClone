@@ -9,9 +9,9 @@
 import UIKit
 
 class Checklist: NSObject, NSCoding {
-    var name = ""
+    var name: String?
     var items = [ChecklistItem]()
-    var iconName: String
+    var iconName: String?
     convenience init(name: String) {
         self.init(name: name, iconName: "No Icon")
     }
@@ -21,9 +21,9 @@ class Checklist: NSObject, NSCoding {
         super.init()
     }
     required init?(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObject(forKey: "Name") as! String
-        items = aDecoder.decodeObject(forKey: "Items") as! [ChecklistItem]
-        iconName = aDecoder.decodeObject(forKey: "IconName") as! String
+        name = aDecoder.decodeObject(forKey: "Name") as? String
+        items = (aDecoder.decodeObject(forKey: "Items") as? [ChecklistItem])!
+        iconName = aDecoder.decodeObject(forKey: "IconName") as? String
         super.init()
     }
     func encode(with aCoder: NSCoder) {

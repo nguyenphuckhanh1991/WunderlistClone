@@ -12,7 +12,7 @@ import UserNotifications
 class ChecklistItem: NSObject, NSCoding {
     var dueDate = Date()
     var shouldRemind = false
-    var itemID: Int
+    var itemID: Int?
     var text = ""
     var checked = false
     func toggleChecked() {

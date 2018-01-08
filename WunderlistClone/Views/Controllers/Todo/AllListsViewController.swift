@@ -68,7 +68,7 @@ extension AllListsViewController: UITableViewDataSource {
         } else {
             cell.detailTextLabel!.text = "\(count) Remaining"
         }
-        cell.imageView?.image = UIImage(named: checklist.iconName)
+        cell.imageView?.image = UIImage(named: checklist.iconName!)
         return cell
     }
     func tableView(_ tableView: UITableView,

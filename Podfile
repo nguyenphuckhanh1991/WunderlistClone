@@ -6,23 +6,19 @@ target 'WunderlistClone' do
   use_frameworks!
 
   # Pods for WunderlistClone
-	pod 'Alamofire'
-  	pod 'SwiftyJSON'
-	pod ‘SwiftLint’
+	pod 'SwiftLint'
+	pod 'IQKeyboardManagerSwift'
   target 'WunderlistCloneTests' do
     inherit! :search_paths
     # Pods for testing
-	pod 'Alamofire'
-  	pod 'SwiftyJSON'
-	pod ‘SwiftLint’	
+	pod 'SwiftLint'
+	pod 'IQKeyboardManagerSwift'
   end
-
-  target 'WunderlistCloneUITests' do
+ target 'WunderlistCloneUITests' do
     inherit! :search_paths
     # Pods for testing
-	pod 'Alamofire'
-  	pod 'SwiftyJSON'
-	pod ‘SwiftLint’
+	pod 'SwiftLint'
+        pod 'IQKeyboardManagerSwift'
   end
 
 end

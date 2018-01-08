@@ -26,7 +26,7 @@ class ListDetailViewController: UITableViewController {
             title = "Edit Checklist"
             textField.text = checklist.name
             doneBarButton.isEnabled = true
-            iconName = checklist.iconName
+            iconName = checklist.iconName!
         }
         iconImageView.image = UIImage(named: iconName)
     }
