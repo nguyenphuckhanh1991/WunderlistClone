@@ -15,10 +15,13 @@ struct Storyboard {
         static let StartViewController                  = "StartViewController"
         static let MainViewController                   = "MainViewController"
     }
-    struct User {
-        static let User                                 = "User"
-        static let ProfileTableViewController           = "ProfileTableViewController"
-        static let EditProfileTableViewController       = "EditProfileTableViewController"
+    struct Todo {
+        static let Todo                                 = "Todo"
+        static let AllListsViewController               = "AllListsViewController"
+        static let ChecklistViewController              = "ChecklistViewController"
+        static let IconPickerViewController             = "IconPickerViewController"
+        static let ItemDetailViewController             = "ItemDetailViewController"
+        static let ListDetailViewController             = "ListDetailViewController"
     }
     struct Login {
         static let Login                                = "Login"
@@ -43,24 +46,11 @@ struct Storyboard {
         static let BaseTabbarController                 = "BaseTabbarController"
         static let BaseViewController                   = "BaseViewController"
     }
-    struct CustomCell {
-        static let FirstProfileCell                     = "FirstProfileCell"
-        static let FirstCommentTableViewCell            = "FirstCommentTableViewCell"
-        static let FirstTimelineTableViewCell           = "FirstTimelineTableViewCell"
-        static let CustomCommentCell                    = "CustomCommentCell"
-        static let TimeLineTableViewCell                = "TimeLineTableViewCell"
-        static let ChatroomCell                         = "ChatroomCell"
-        static let AvaImageCollectionViewCell           = "AvaImageCollectionViewCell"
-    }
     struct Notification {
         static let postStatus                           = "postStatus"
         static let postItem                             = "postItem"
     }
     struct CustomView {
         static let statusBar                            = "statusBar"
-    }
-    struct TabBarTitle {
-        static let timeline                             = "Timeline"
-        static let profile                              = "Profile"
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class MainSignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,16 @@ class SignInViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ShowSignIn" {
+//            let controller = segue.destination as! ChecklistViewController
+//            controller.push
+//        } else if segue.identifier == "ShowSignUp" {
+//            let navigationController = segue.destination
+//                as! UINavigationController
+//            let controller = navigationController.topViewController as! ListDetailViewController
+//        }
+//    }
 
     /*
     // MARK: - Navigation
