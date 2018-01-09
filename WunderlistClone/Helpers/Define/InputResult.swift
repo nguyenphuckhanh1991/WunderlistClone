@@ -24,8 +24,8 @@ struct InputResult {
         static let actionTitle              = "Close"
     }
     struct ActionSheet {
-        static let pickPhoto                = "Pick Photo"
-        static let takePhoto                = "Take Photo"
+        static let chooseAvatar                = "Choose from Gallery"
+        static let takePhoto                = "Take a Photo"
         static let cancel                   = "Cancel"
     }
     struct MessageText {

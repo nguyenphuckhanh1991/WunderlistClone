@@ -12,19 +12,19 @@ import UserNotifications
 protocol ItemDetailViewControllerDelegate: class {
     func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController)
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem)
-    func ItemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem)
+    func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem)
 }
 class ItemDetailViewController: UITableViewController {
     weak var delegate: ItemDetailViewControllerDelegate?
     var itemToEdit: ChecklistItem?
     var dueDate = Date()
     var datePickerVisible = false
-    @IBOutlet weak var datePickerCell: UITableViewCell!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var shouldRemindSwitch: UISwitch!
-    @IBOutlet weak var dueDateLabel: UILabel!
-    @IBOutlet weak var doneBarButton: UIBarButtonItem!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak private var datePickerCell: UITableViewCell!
+    @IBOutlet weak private var datePicker: UIDatePicker!
+    @IBOutlet weak private var shouldRemindSwitch: UISwitch!
+    @IBOutlet weak private var dueDateLabel: UILabel!
+    @IBOutlet weak private var doneBarButton: UIBarButtonItem!
+    @IBOutlet weak private var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         if let item = itemToEdit {
@@ -51,7 +51,7 @@ class ItemDetailViewController: UITableViewController {
             item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = dueDate
             item.scheduleNotification()
-            delegate?.ItemDetailViewController(self, didFinishEditing: item)
+            delegate?.itemDetailViewController(self, didFinishEditing: item)
         } else {
             let item = ChecklistItem()
             item.text = textField.text!
@@ -70,8 +70,7 @@ class ItemDetailViewController: UITableViewController {
         textField.resignFirstResponder()
         if switchControl.isOn {
             let center = UNUserNotificationCenter.current()
-            center.requestAuthorization(options: [.alert, .sound]) {
-                granted, error in /* do nothing */
+            center.requestAuthorization(options: [.alert, .sound]) {(_, _) in
             }
         }
     }

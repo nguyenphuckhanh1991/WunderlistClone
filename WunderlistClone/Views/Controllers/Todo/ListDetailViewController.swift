@@ -14,9 +14,9 @@ protocol ListDetailViewControllerDelegate: class {
     func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist: Checklist)
 }
 class ListDetailViewController: UITableViewController {
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var doneBarButton: UIBarButtonItem!
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak private var textField: UITextField!
+    @IBOutlet weak private var doneBarButton: UIBarButtonItem!
+    @IBOutlet weak private var iconImageView: UIImageView!
     var iconName = "Folder"
     weak var delegate: ListDetailViewControllerDelegate?
     var checklistToEdit: Checklist?
@@ -42,12 +42,12 @@ class ListDetailViewController: UITableViewController {
         if let checklist = checklistToEdit {
             checklist.name = textField.text!
             checklist.iconName = iconName
-            delegate?.listDetailViewController(self,
-                                               didFinishEditing: checklist)
+            delegate?.listDetailViewController(self, didFinishEditing: checklist)
+            dismiss(animated: true, completion: nil)
         } else {
             let checklist = Checklist(name: textField.text!, iconName: iconName)
-            delegate?.listDetailViewController(self,
-                                               didFinishAdding: checklist)
+            delegate?.listDetailViewController(self, didFinishAdding: checklist)
+            dismiss(animated: true, completion: nil)
         }
     }
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -59,8 +59,9 @@ class ListDetailViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PickIcon" {
-            let controller = segue.destination as! IconPickerViewController
-            controller.delegate = self
+            if let controller = segue.destination as? IconPickerViewController {
+                controller.delegate = self
+            }
         }
     }
 }
@@ -77,6 +78,6 @@ extension ListDetailViewController: IconPickerViewControllerDelegate {
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String) {
         self.iconName = iconName
         iconImageView.image = UIImage(named: iconName)
-        let _ = navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }

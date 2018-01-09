@@ -16,15 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     let dataModel = DataModel()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.sharedManager().enable = true
-
-//        let navigationController = window!.rootViewController
-//           as! UINavigationController
-//        let controller = navigationController.viewControllers[0]
-//           as! AllListsViewController
-//        controller.dataModel = dataModel
+        
+        if let navigationController = window!.rootViewController as? UINavigationController {
+            if let controller = navigationController.viewControllers[0] as? AllListsViewController {
+                controller.dataModel = dataModel
+            }
+        }
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) {
-            (granted, error) in
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, _) in
             if granted {
                 print("We have permission")
             } else {

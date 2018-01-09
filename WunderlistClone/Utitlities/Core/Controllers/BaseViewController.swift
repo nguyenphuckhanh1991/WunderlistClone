@@ -39,4 +39,3 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
     }
 }
-

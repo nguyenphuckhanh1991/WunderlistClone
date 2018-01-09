@@ -1,6 +1,6 @@
 //
 //  Checklist.swift
-//  Checklists
+//  WunderlistClone
 //
 //  Created by nguyen.phuc.khanh on 1/5/18.
 //  Copyright © 2018 khanh.nguyen. All rights reserved.

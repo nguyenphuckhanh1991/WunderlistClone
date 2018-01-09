@@ -9,9 +9,9 @@
 import UIKit
 
 class MainSignInViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self as? UINavigationControllerDelegate
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

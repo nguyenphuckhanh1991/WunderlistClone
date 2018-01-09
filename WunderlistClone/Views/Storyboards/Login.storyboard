@@ -489,6 +489,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="d8f-Px-VpP" eventType="touchUpInside" id="3Jt-eG-rtI"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign into Wunderlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keN-hF-HcZ">
                                         <rect key="frame" x="111.99999999999999" y="14.999999999999998" width="170.66666666666663" height="22.333333333333329"/>
@@ -574,7 +577,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="d8f-Px-VpP" id="tRl-Az-OVN"/>
                                                 </connections>
@@ -653,6 +656,7 @@
                     <connections>
                         <outlet property="emailInput" destination="CzI-P7-D7q" id="2b1-jg-fvm"/>
                         <outlet property="passwordInput" destination="9k6-Er-RLx" id="efx-br-KTh"/>
+                        <outlet property="signInButton" destination="kRN-eG-4xl" id="woY-bx-imM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpt-gR-fsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -949,25 +953,6 @@
                                             <action selector="backMainSignInVC:" destination="rCD-eV-rek" eventType="touchUpInside" id="rd5-c4-Om1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-3s-T3M" customClass="CustomButton" customModule="WunderlistClone" customModuleProvider="target">
-                                        <rect key="frame" x="155" y="30" width="84" height="84"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="84" id="HDe-S2-5O0"/>
-                                            <constraint firstAttribute="width" constant="84" id="Wn8-vI-kZz"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="Camera"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="42"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQC-hi-b7b" customClass="CustomView" customModule="WunderlistClone" customModuleProvider="target">
                                         <rect key="frame" x="14" y="323" width="366" height="44"/>
                                         <subviews>
@@ -978,7 +963,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="d8f-Px-VpP" id="Px9-oQ-Xxj"/>
                                                 </connections>
@@ -1071,34 +1056,69 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="AGS-4q-9Gs" customClass="CustomImageView" customModule="WunderlistClone" customModuleProvider="target">
+                                        <rect key="frame" x="155" y="15" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="UIc-6x-X9n"/>
+                                            <constraint firstAttribute="height" constant="84" id="hgg-VV-sih"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="42"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-3s-T3M">
+                                        <rect key="frame" x="155" y="15" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="cDS-je-rmv"/>
+                                            <constraint firstAttribute="height" constant="84" id="ubO-GC-Vjf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="42"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="chooseAva:" destination="rCD-eV-rek" eventType="touchUpInside" id="o8q-QY-oZC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9372261167" green="0.94113481040000002" blue="0.93694061039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="A1o-Y9-QSQ" secondAttribute="trailing" constant="14" id="42A-za-hmw"/>
                                     <constraint firstItem="MOD-NI-dOK" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="14" id="49K-bc-Etw"/>
                                     <constraint firstItem="6Xs-9T-nJp" firstAttribute="top" secondItem="e6M-3D-5PO" secondAttribute="top" constant="10" id="5ZN-UB-iMI"/>
-                                    <constraint firstItem="QaT-3s-T3M" firstAttribute="top" secondItem="e6M-3D-5PO" secondAttribute="top" constant="30" id="ARJ-Pw-jCM"/>
-                                    <constraint firstItem="QaT-3s-T3M" firstAttribute="centerX" secondItem="e6M-3D-5PO" secondAttribute="centerX" id="AbH-Pt-FVL"/>
+                                    <constraint firstItem="AGS-4q-9Gs" firstAttribute="top" secondItem="e6M-3D-5PO" secondAttribute="top" constant="15" id="7Ao-RN-kYI"/>
                                     <constraint firstItem="A1o-Y9-QSQ" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="14" id="BDZ-BP-Fsl"/>
                                     <constraint firstAttribute="trailing" secondItem="Lye-eA-89k" secondAttribute="trailing" constant="12" id="Dvw-Us-YyN"/>
                                     <constraint firstAttribute="trailing" secondItem="NQC-hi-b7b" secondAttribute="trailing" constant="14" id="NmD-ZN-Dnv"/>
                                     <constraint firstItem="Itm-pW-yoN" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="5" id="S6s-X1-5wv"/>
                                     <constraint firstItem="ynR-fc-Jyq" firstAttribute="top" secondItem="NQC-hi-b7b" secondAttribute="bottom" constant="12" id="U0m-en-Q6f"/>
+                                    <constraint firstItem="QaT-3s-T3M" firstAttribute="centerX" secondItem="e6M-3D-5PO" secondAttribute="centerX" id="UnP-ya-fhT"/>
                                     <constraint firstItem="6Xs-9T-nJp" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" id="XPY-Qu-ibU"/>
                                     <constraint firstItem="sVh-Bd-KQi" firstAttribute="top" secondItem="Lye-eA-89k" secondAttribute="bottom" constant="10" id="f01-rl-MzJ"/>
                                     <constraint firstAttribute="trailing" secondItem="MOD-NI-dOK" secondAttribute="trailing" constant="14" id="f9q-vZ-yPB"/>
                                     <constraint firstAttribute="height" constant="435" id="gFb-jx-e4h"/>
+                                    <constraint firstItem="QaT-3s-T3M" firstAttribute="top" secondItem="e6M-3D-5PO" secondAttribute="top" constant="15" id="gXZ-Pd-oaw"/>
                                     <constraint firstItem="A1o-Y9-QSQ" firstAttribute="top" secondItem="MOD-NI-dOK" secondAttribute="bottom" constant="1" id="gxl-ZR-smw"/>
                                     <constraint firstItem="sVh-Bd-KQi" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="14" id="j7x-rC-6XE"/>
                                     <constraint firstItem="Itm-pW-yoN" firstAttribute="top" secondItem="e6M-3D-5PO" secondAttribute="top" constant="14" id="o3x-AJ-PfA"/>
-                                    <constraint firstItem="Lye-eA-89k" firstAttribute="top" secondItem="QaT-3s-T3M" secondAttribute="bottom" constant="20" id="odB-93-1LX"/>
                                     <constraint firstItem="Lye-eA-89k" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="12" id="p1B-c8-3fC"/>
                                     <constraint firstAttribute="trailing" secondItem="ynR-fc-Jyq" secondAttribute="trailing" constant="14" id="qEG-1o-fX6"/>
                                     <constraint firstItem="MOD-NI-dOK" firstAttribute="top" secondItem="sVh-Bd-KQi" secondAttribute="bottom" constant="15" id="qlp-mF-Dc4"/>
                                     <constraint firstItem="ynR-fc-Jyq" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="14" id="sfO-Tb-V2n"/>
                                     <constraint firstAttribute="trailing" secondItem="sVh-Bd-KQi" secondAttribute="trailing" constant="14" id="shf-tm-RoB"/>
                                     <constraint firstItem="NQC-hi-b7b" firstAttribute="leading" secondItem="e6M-3D-5PO" secondAttribute="leading" constant="14" id="tAb-LB-qDj"/>
+                                    <constraint firstItem="Lye-eA-89k" firstAttribute="top" secondItem="QaT-3s-T3M" secondAttribute="bottom" constant="35" id="ulO-M2-Pyd"/>
                                     <constraint firstItem="NQC-hi-b7b" firstAttribute="top" secondItem="A1o-Y9-QSQ" secondAttribute="bottom" constant="1" id="wPP-oS-OFg"/>
+                                    <constraint firstItem="AGS-4q-9Gs" firstAttribute="centerX" secondItem="e6M-3D-5PO" secondAttribute="centerX" id="z1a-7t-q1w"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1123,6 +1143,7 @@
                         <viewLayoutGuide key="safeArea" id="FTf-1m-cIP"/>
                     </view>
                     <connections>
+                        <outlet property="avaImageView" destination="AGS-4q-9Gs" id="duY-Nx-GFD"/>
                         <outlet property="emailInput" destination="o4w-k1-1an" id="vUw-Pr-SDx"/>
                         <outlet property="passwordInput" destination="i5v-hR-1kh" id="OX4-Hg-Zpp"/>
                         <outlet property="userNameInput" destination="lj8-HF-ekg" id="jwg-2p-Mah"/>

@@ -12,7 +12,7 @@ protocol IconPickerViewControllerDelegate: class {
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String)
 }
 class IconPickerViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
     weak var delegate: IconPickerViewControllerDelegate?
     let icons = ["No Icon", "Appointments", "Birthdays", "Chores", "Drinks", "Folder", "Groceries", "Inbox", "Photos", "Trips"]
     override func viewDidLoad() {

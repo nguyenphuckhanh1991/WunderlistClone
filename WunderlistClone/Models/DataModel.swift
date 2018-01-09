@@ -1,6 +1,6 @@
 //
 //  DataModel.swift
-//  Checklists
+//  WunderlistClone
 //
 //  Created by Joy on 1/7/18.
 //  Copyright © 2018 khanh.nguyen. All rights reserved.
@@ -29,7 +29,7 @@ class DataModel {
         return paths[0]
     }
     func dataFilePath() -> URL {
-        return documentsDirectory().appendingPathComponent("Checklists.plist")
+        return documentsDirectory().appendingPathComponent("WunderlistClone.plist")
     }
     func saveChecklists() {
         let data = NSMutableData()
@@ -42,9 +42,10 @@ class DataModel {
         let path = dataFilePath()
         if let data = try? Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-            lists = unarchiver.decodeObject(forKey: "Checklists") as! [Checklist]
+            if (unarchiver.decodeObject(forKey: "Checklists") as? [Checklist]) != nil {
             unarchiver.finishDecoding()
             sortChecklists()
+            }
         }
     }
     func registerDefaults() {
@@ -73,4 +74,3 @@ class DataModel {
         return itemID
     }
 }
-

@@ -42,7 +42,6 @@
 		B7D9B5C21FFDCA8100419877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C11FFDCA8100419877 /* AppDelegate.swift */; };
 		B7D9B5C41FFDCA8100419877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C31FFDCA8100419877 /* ViewController.swift */; };
 		B7D9B5C71FFDCA8100419877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B5C51FFDCA8100419877 /* Main.storyboard */; };
-		B7D9B5CF1FFDCA8100419877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B5CD1FFDCA8100419877 /* LaunchScreen.storyboard */; };
 		B7D9B5DA1FFDCA8200419877 /* WunderlistCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5D91FFDCA8200419877 /* WunderlistCloneTests.swift */; };
 		B7D9B5E51FFDCA8200419877 /* WunderlistCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5E41FFDCA8200419877 /* WunderlistCloneUITests.swift */; };
 		B7D9B60A1FFDD21C00419877 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B6061FFDD21C00419877 /* Font.swift */; };
@@ -116,7 +115,6 @@
 		B7D9B5C11FFDCA8100419877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D9B5C31FFDCA8100419877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7D9B5C61FFDCA8100419877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B7D9B5CE1FFDCA8100419877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7D9B5D01FFDCA8100419877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D9B5D51FFDCA8200419877 /* WunderlistCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderlistCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D9B5D91FFDCA8200419877 /* WunderlistCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderlistCloneTests.swift; sourceTree = "<group>"; };
@@ -364,7 +362,6 @@
 			isa = PBXGroup;
 			children = (
 				B7D9B5C51FFDCA8100419877 /* Main.storyboard */,
-				B7D9B5CD1FFDCA8100419877 /* LaunchScreen.storyboard */,
 				B782F8521FFE157E00F03788 /* Login.storyboard */,
 				B749E595200349A500543132 /* Todo.storyboard */,
 			);
@@ -536,7 +533,6 @@
 				B749E5B12003636400543132 /* SF-UI-Display-Regular.otf in Resources */,
 				B749E5B02003636100543132 /* SF-UI-Text-Regular.otf in Resources */,
 				B749E596200349A500543132 /* Todo.storyboard in Resources */,
-				B7D9B5CF1FFDCA8100419877 /* LaunchScreen.storyboard in Resources */,
 				B7D9B6221FFE09EF00419877 /* Assets.xcassets in Resources */,
 				B749E5AE2003635C00543132 /* SF-UI-Display-Thin.otf in Resources */,
 				B7D9B5C71FFDCA8100419877 /* Main.storyboard in Resources */,
@@ -626,7 +622,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderlistClone/Pods-WunderlistClone-frameworks.sh\"\n";
 		};
 		7CF3313FC5EC144970F3E55C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -794,14 +790,6 @@
 				B7D9B5C61FFDCA8100419877 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B7D9B5CD1FFDCA8100419877 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7D9B5CE1FFDCA8100419877 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

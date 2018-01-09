@@ -1,6 +1,6 @@
 //
 //  ChecklistItem.swift
-//  Checklists
+//  WunderlistClone
 //
 //  Created by nguyen.phuc.khanh on 1/5/18.
 //  Copyright © 2018 khanh.nguyen. All rights reserved.
@@ -13,7 +13,7 @@ class ChecklistItem: NSObject, NSCoding {
     var dueDate = Date()
     var shouldRemind = false
     var itemID: Int?
-    var text = ""
+    var text: String?
     var checked = false
     func toggleChecked() {
         checked = !checked
@@ -30,9 +30,9 @@ class ChecklistItem: NSObject, NSCoding {
         aCoder.encode(itemID, forKey: "ItemID")
     }
     required init?(coder aDecoder: NSCoder) {
-        text = aDecoder.decodeObject(forKey: "Text") as! String
+        text = aDecoder.decodeObject(forKey: "Text") as? String
         checked = aDecoder.decodeBool(forKey: "Checked")
-        dueDate = aDecoder.decodeObject(forKey: "DueDate") as! Date
+        dueDate = (aDecoder.decodeObject(forKey: "DueDate") as? Date)!
         shouldRemind = aDecoder.decodeBool(forKey: "ShouldRemind")
         itemID = aDecoder.decodeInteger(forKey: "ItemID")
         super.init()
@@ -42,20 +42,20 @@ class ChecklistItem: NSObject, NSCoding {
         if shouldRemind && dueDate > Date() {
             let content = UNMutableNotificationContent()
             content.title = "Reminder:"
-            content.body = text
+            content.body = text!
             content.sound = UNNotificationSound.default()
             let calendar = Calendar(identifier: .gregorian)
             let components = calendar.dateComponents([.month, .day, .hour, .minute], from: dueDate)
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-            let request = UNNotificationRequest(identifier: "\(itemID)", content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: "\(String(describing: itemID))", content: content, trigger: trigger)
             let center = UNUserNotificationCenter.current()
             center.add(request)
-            print("Scheduled notification \(request) for itemID \(itemID)")
+            print("Scheduled notification \(request) for itemID \(String(describing: itemID))")
         }
     }
     func removeNotification() {
         let center = UNUserNotificationCenter.current()
-        center.removePendingNotificationRequests(withIdentifiers: ["\(itemID)"])
+        center.removePendingNotificationRequests(withIdentifiers: ["\(String(describing: itemID))"])
     }
     deinit {
         removeNotification()

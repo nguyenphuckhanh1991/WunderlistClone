@@ -9,17 +9,15 @@
 import UIKit
 
 class ForgotPasswordViewController: UIViewController {
-    @IBOutlet weak var emailInput: UITextField!
+    @IBOutlet weak private var emailInput: UITextField!
     @IBAction func backSignInVC(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 extension ForgotPasswordViewController: UITextFieldDelegate {
@@ -29,4 +27,3 @@ extension ForgotPasswordViewController: UITextFieldDelegate {
         return true
     }
 }
-

@@ -2,15 +2,15 @@
 //  AllListsViewController.swift
 //  WunderlistClone
 //
-//  Created by Joy on 1/7/18.
+//  Created by nguyen.phuc.khanh on 1/7/18.
 //  Copyright © 2018 khanh.nguyen. All rights reserved.
 //
 
 import UIKit
 
 class AllListsViewController: UIViewController {
-    var dataModel: DataModel!
-    @IBOutlet weak var tableView: UITableView!
+    var dataModel = DataModel()
+    @IBOutlet weak private var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,6 +25,7 @@ class AllListsViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         tableView.reloadData()
     }
     // MARK: Functions
@@ -39,14 +40,15 @@ class AllListsViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowChecklist" {
-            let controller = segue.destination as! ChecklistViewController
-            controller.checklist = sender as! Checklist
+            if let controller = segue.destination as? ChecklistViewController {
+                controller.checklist = sender as? Checklist
+            }
         } else if segue.identifier == "AddChecklist" {
-            let navigationController = segue.destination
-                as! UINavigationController
-            let controller = navigationController.topViewController as! ListDetailViewController
-            controller.delegate = self
-            controller.checklistToEdit = nil
+            if let navigationController = segue.destination as? UINavigationController {
+                let controller = navigationController.topViewController as? ListDetailViewController
+                controller?.delegate = self
+                controller?.checklistToEdit = nil
+            }
         }
     }
 }
@@ -71,23 +73,23 @@ extension AllListsViewController: UITableViewDataSource {
         cell.imageView?.image = UIImage(named: checklist.iconName!)
         return cell
     }
-    func tableView(_ tableView: UITableView,
-                            commit editingStyle: UITableViewCellEditingStyle,
-                            forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         dataModel.lists.remove(at: indexPath.row)
         let indexPaths = [indexPath]
         tableView.deleteRows(at: indexPaths, with: .automatic)
     }
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        let navigationController = storyboard!.instantiateViewController(
+        if let navigationController = storyboard!.instantiateViewController(
             withIdentifier: "ListDetailNavigationController")
-            as! UINavigationController
-        let controller = navigationController.topViewController
-            as! ListDetailViewController
-        controller.delegate = self
-        let checklist = dataModel.lists[indexPath.row]
-        controller.checklistToEdit = checklist
-        present(navigationController, animated: true, completion: nil)
+            as? UINavigationController {
+            if let controller = navigationController.topViewController
+                as? ListDetailViewController {
+                controller.delegate = self
+                let checklist = dataModel.lists[indexPath.row]
+                controller.checklistToEdit = checklist
+                present(navigationController, animated: true, completion: nil)
+            }
+        }
     }
 }
 // MARK: UITableViewDelegate
@@ -121,3 +123,4 @@ extension AllListsViewController: UINavigationControllerDelegate {
         }
     }
 }
+
