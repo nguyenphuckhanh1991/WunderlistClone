@@ -17,10 +17,10 @@ class DataModel {
     }
     var indexOfSelectedChecklist: Int {
         get {
-            return UserDefaults.standard.integer(forKey: "ChecklistIndex")
+            return UserDefaults.standard.integer(forKey: AppKey.DataModel.checklistIndex)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "ChecklistIndex")
+            UserDefaults.standard.set(newValue, forKey: AppKey.DataModel.checklistIndex)
             UserDefaults.standard.synchronize()
         }
     }
@@ -29,12 +29,12 @@ class DataModel {
         return paths[0]
     }
     func dataFilePath() -> URL {
-        return documentsDirectory().appendingPathComponent("WunderlistClone.plist")
+        return documentsDirectory().appendingPathComponent(AppKey.DataModel.plist)
     }
     func saveChecklists() {
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWith: data)
-        archiver.encode(lists, forKey: "Checklists")
+        archiver.encode(lists, forKey: AppKey.DataModel.checklists)
         archiver.finishEncoding()
         data.write(to: dataFilePath(), atomically: true)
     }
@@ -42,7 +42,7 @@ class DataModel {
         let path = dataFilePath()
         if let data = try? Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-            if (unarchiver.decodeObject(forKey: "Checklists") as? [Checklist]) != nil {
+            if (unarchiver.decodeObject(forKey: AppKey.DataModel.checklists) as? [Checklist]) != nil {
             unarchiver.finishDecoding()
             sortChecklists()
             }

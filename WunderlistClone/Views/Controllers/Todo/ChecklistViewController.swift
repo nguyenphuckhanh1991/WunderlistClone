@@ -29,9 +29,9 @@ class ChecklistViewController: UIViewController {
         if let view = cell.viewWithTag(1001) {
             if let label = view as? UILabel {
                 if item.checked {
-                    label.text = "√"
+                    label.text = AppKey.LabelText.mark
                 } else {
-                    label.text = ""
+                    label.text = AppKey.LabelText.noneMark
                 }
                 label.textColor = view.tintColor
             } else {
@@ -42,7 +42,7 @@ class ChecklistViewController: UIViewController {
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
         if let view = cell.viewWithTag(1000) {
             if let label = view as? UILabel {
-                label.text = "\(item.itemID!) - " + "\(item.text!)"
+                label.text = "\(item.text!)"
             } else {
                 print ("view is of type \(view.classForCoder)")
             }
@@ -51,14 +51,14 @@ class ChecklistViewController: UIViewController {
     @IBAction func presentAddItem(_ sender: Any) {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddItem" {
+        if segue.identifier == AppKey.SegueIdentifier.AddItem {
             if let navigationController = segue.destination as? UINavigationController {
                 if let controller = navigationController.topViewController as? ItemDetailViewController {
                     controller.delegate = self
 
                 }
             }
-        } else if segue.identifier == "EditItem" {
+        } else if segue.identifier == AppKey.SegueIdentifier.EditItem {
             if let navigationController = segue.destination as? UINavigationController {
                 if let controller = navigationController.topViewController as? ItemDetailViewController {
                     controller.delegate = self
@@ -77,7 +77,7 @@ extension ChecklistViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: "ChecklistItem", for: indexPath)
+            withIdentifier: Storyboard.CellIdentifier.checklistItem, for: indexPath)
         let item = checklist.items[indexPath.row]
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
@@ -100,6 +100,7 @@ extension ChecklistViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+// MARK: ItemDetailViewControllerDelegate
 extension ChecklistViewController: ItemDetailViewControllerDelegate {
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem) {
         if let index = checklist.items.index(of: item) {

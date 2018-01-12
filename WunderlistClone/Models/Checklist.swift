@@ -13,7 +13,7 @@ class Checklist: NSObject, NSCoding {
     var items = [ChecklistItem]()
     var iconName: String?
     convenience init(name: String) {
-        self.init(name: name, iconName: "No Icon")
+        self.init(name: name, iconName: IconKey.appointments)
     }
     init(name: String, iconName: String) {
         self.name = name
@@ -21,15 +21,15 @@ class Checklist: NSObject, NSCoding {
         super.init()
     }
     required init?(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObject(forKey: "Name") as? String
-        items = (aDecoder.decodeObject(forKey: "Items") as? [ChecklistItem])!
-        iconName = aDecoder.decodeObject(forKey: "IconName") as? String
+        name = aDecoder.decodeObject(forKey: AppKey.Checklist.name) as? String
+        items = (aDecoder.decodeObject(forKey: AppKey.Checklist.items) as? [ChecklistItem])!
+        iconName = aDecoder.decodeObject(forKey: AppKey.Checklist.iconName) as? String
         super.init()
     }
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: "Name")
-        aCoder.encode(items, forKey: "Items")
-        aCoder.encode(iconName, forKey: "IconName")
+        aCoder.encode(name, forKey: AppKey.Checklist.name)
+        aCoder.encode(items, forKey: AppKey.Checklist.items)
+        aCoder.encode(iconName, forKey: AppKey.Checklist.iconName)
     }
     func countUncheckedItems() -> Int {
         var count = 0

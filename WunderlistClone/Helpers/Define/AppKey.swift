@@ -13,18 +13,6 @@ struct AppKey {
         static let password                 = "password"
         static let email                    = "email"
     }
-    struct Chatroom {
-        static let chatrooms                = "chatrooms"
-        static let pagination               = "pagination"
-        static let page                     = "page"
-        static let pagesize                 = "page_size"
-        static let total                    = "total"
-        static let totalpages               = "total_pages"
-        static let lastindex                = "last_index"
-        static let username                 = "name"
-        static let description              = "description"
-        static let avatarUrl                = "avatarUrl"
-    }
     struct HeaderKey {
         static let ContentType              = "Content-Type"
         static let Authorization            = "Authorization"
@@ -36,59 +24,46 @@ struct AppKey {
     struct UserDefaultKey {
         static let user                     = "user"
     }
-    struct TokenKey {
-        static let token                    = "token"
-        static let accessToken              = "access_token"
-        static let refreshToken             = "refresh_token"
-        static let tokeType                 = "token_type"
+    struct SegueIdentifier {
+        static let AddItem                  = "AddItem"
+        static let EditItem                 = "EditItem"
+        static let ShowChecklist            = "ShowChecklist"
+        static let AddChecklist             = "AddChecklist"
+        static let PickIcon                 = "PickIcon"
     }
-    struct ResponseKey {
-        static let chatroom                 = "chatroom"
-        static let success                  = "success"
-        static let code                     = "code"
-        static let message                  = "message"
-        static let unauthorized             = "UNAUTHORIZED"
+    struct LabelText {
+        static let noItems                  = "(No Items)"
+        static let allDone                  = "All Done!"
+        static let ShowChecklist            = "ShowChecklist"
+        static let AddChecklist             = "AddChecklist"
+        static let PickIcon                 = "PickIcon"
+        static let mark                     = "√"
+        static let noneMark                 = ""
+        static let viewType                 = "view is of type"
+        static let remaining                = " Remaining"
+        static let chooseAvaMessage         = "Personalize your Wunderlist account by uploading your photo."
     }
-    struct UserPropertyKey {
-        static let avatarImage              = "avatarImage"
-        static let userName                 = "username"
-        static let emailAddress             = "email"
-        static let phoneNumber              = "phoneNumber"
-        static let dateOfBirth              = "dateOfBirth"
-        static let userId                   = "_id"
+    struct WebViewURL {
+        static let policy                   = "https://www.wunderlist.com/en/privacy-policy"
+        static let terms                    = "https://www.wunderlist.com/en/terms-of-use"
     }
-    struct UserInfoKey {
-        static let user                     = "user"
-        static let avaImage                 = "avatar"
-        static let userName                 = "userName"
-        static let emailAddress             = "emailAddress"
-        static let phoneNumber              = "phoneNumber"
-        static let dateOfBirth              = "dateOfBirth"
-        static let userId                   = "_id"
+    struct DataModel {
+        static let checklistIndex           = "ChecklistIndex"
+        static let checklists               = "Checklists"
+        static let plist                    = "WunderlistClone.plist"
     }
-    struct UserPostKey {
-        static let avatarImageURL           = "avatarUrl"
-        static let userName                 = "name"
-        static let description              = "description"
-        static let userId                   = "_id"
+    struct ChecklistItem {
+        static let text                     = "Text"
+        static let checked                  = "Checked"
+        static let dueDate                  = "DueDate"
+        static let shouldRemind             = "ShouldRemind"
+        static let itemID                   = "ItemID"
     }
-    struct StatusPropertyKey {
-        static let avatarImage              = "avatarImage"
-        static let userName                 = "userName"
-        static let emailAddress             = "emailAddress"
-        static let phoneNumber              = "phoneNumber"
-        static let dateOfBirth              = "dateOfBirth"
-        static let statusImage              = "statusImage"
-        static let shareImage               = "shareImage"
-        static let commentCount             = "commentCount"
-        static let likeCount                = "likeCount"
-        static let likeLabel                = "likeLabel"
-        static let shareLabel               = "shareLabel"
-        static let commentLabel             = "commentLabel"
-        static let date                     = "date"
-        static let status                   = "status"
-        static let likeImage                = "likeImage"
-        static let contentStateImage        = "contentStateImage"
-        static let commentImage             = "commentImage"
+    struct Checklist {
+        static let name                     = "Name"
+        static let items                    = "Items"
+        static let iconName                 = "IconName"
     }
 }
+
+

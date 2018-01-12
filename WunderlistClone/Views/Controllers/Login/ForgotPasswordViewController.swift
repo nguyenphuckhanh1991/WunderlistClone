@@ -20,6 +20,7 @@ class ForgotPasswordViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
+// MARK: - UITextFieldDelegate
 extension ForgotPasswordViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let oldText = textField.text! as NSString

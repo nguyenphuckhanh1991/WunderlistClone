@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController, UIWebViewDelegate {
         createTermWV()
     }
     @IBAction func chooseAva(_ sender: UIButton) {
-        showActionSheet(title: "", message: "Personalize your Wunderlist account by uploading your photo.")
+        showActionSheet(title: AppKey.LabelText.noneMark, message: AppKey.LabelText.chooseAvaMessage)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController, UIWebViewDelegate {
     func createPrivacyWV() {
         let myWebView: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         self.view.addSubview(myWebView)
-        let myURL = URL(string: "https://www.wunderlist.com/en/privacy-policy")
+        let myURL = URL(string: AppKey.WebViewURL.policy)
         let myURLRequest = URLRequest(url: myURL!)
         myWebView.delegate = self
         myWebView.loadRequest(myURLRequest)
@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController, UIWebViewDelegate {
     func createTermWV() {
         let myWebView: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         self.view.addSubview(myWebView)
-        let myURL = URL(string: "https://www.wunderlist.com/en/terms-of-use")
+        let myURL = URL(string: AppKey.WebViewURL.terms)
         let myURLRequest = URLRequest(url: myURL!)
         myWebView.delegate = self
         myWebView.loadRequest(myURLRequest)
@@ -79,6 +79,7 @@ class SignUpViewController: UIViewController, UIWebViewDelegate {
         }
     }
 }
+// MARK: - UITextFieldDelegate
 extension SignUpViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let oldText = textField.text! as NSString
@@ -86,6 +87,7 @@ extension SignUpViewController: UITextFieldDelegate {
         return true
     }
 }
+// MARK: - UIImagePickerControllerDelegate
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage

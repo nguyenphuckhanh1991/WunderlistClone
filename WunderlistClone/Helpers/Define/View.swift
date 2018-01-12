@@ -29,18 +29,6 @@ struct Storyboard {
         static let signUpViewController                 = "SignUpViewController"
         static let logInNavigation                      = "SignInNavigation"
     }
-    struct Chatroom {
-        static let Chatroom                             = "Chatroom"
-        static let createChatroomViewController         = "CreateChatroomViewController"
-        static let avatarImageViewController            = "AvatarImageViewController"
-    }
-    struct Timeline {
-        static let Timeline                             = "Timeline"
-        static let timelineTableViewController          = "TimelineTableViewController"
-        static let timelineCommentContainerView         = "TimelineCommentContainerView"
-        static let timelineCommentTableViewController   = "TimelineCommentTableViewController"
-        static let postViewController                   = "PostViewController"
-    }
     struct BaseView {
         static let BaseNavigationController             = "BaseNavigationController"
         static let BaseTabbarController                 = "BaseTabbarController"
@@ -52,5 +40,23 @@ struct Storyboard {
     }
     struct CustomView {
         static let statusBar                            = "statusBar"
+    }
+    struct CellIdentifier {
+        static let cell                                 = "Cell"
+        static let iconCell                             = "IconCell"
+        static let checklistItem                        = "ChecklistItem"
+    }
+    struct NavigationControllerIdentifier {
+        static let listDetailNavigationController       = "ListDetailNavigationController"
+    }
+    struct TitleView {
+        static let editChecklist                        = "Edit Checklist"
+        static let editItem                             = "Edit Item"
+    }
+    struct ImageName {
+        static let screen1                             = "screen1"
+        static let screen2                             = "screen2"
+        static let screen3                             = "screen3"
+
     }
 }

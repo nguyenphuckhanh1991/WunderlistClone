@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C8C09D1E6AA945A9B9FF151 /* Pods_WunderlistCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E304906A5AA4530D7A2A05 /* Pods_WunderlistCloneTests.framework */; };
 		A4174E73FB4F24AF8B444EA8 /* Pods_WunderlistCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27743F0DE53942942C2F68A2 /* Pods_WunderlistCloneUITests.framework */; };
+		B724346D200C826500D16D04 /* IconKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724346C200C826500D16D04 /* IconKey.swift */; };
 		B749E596200349A500543132 /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B749E595200349A500543132 /* Todo.storyboard */; };
 		B749E59A20034A4B00543132 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B749E59720034A4900543132 /* DataModel.swift */; };
 		B749E59B20034A4B00543132 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B749E59820034A4A00543132 /* ChecklistItem.swift */; };
@@ -40,7 +41,6 @@
 		B782F86E1FFE279000F03788 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F86D1FFE279000F03788 /* CustomView.swift */; };
 		B782F8701FFE3DDB00F03788 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F86F1FFE3DDB00F03788 /* CustomImageView.swift */; };
 		B7D9B5C21FFDCA8100419877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C11FFDCA8100419877 /* AppDelegate.swift */; };
-		B7D9B5C41FFDCA8100419877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5C31FFDCA8100419877 /* ViewController.swift */; };
 		B7D9B5C71FFDCA8100419877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B5C51FFDCA8100419877 /* Main.storyboard */; };
 		B7D9B5DA1FFDCA8200419877 /* WunderlistCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5D91FFDCA8200419877 /* WunderlistCloneTests.swift */; };
 		B7D9B5E51FFDCA8200419877 /* WunderlistCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B5E41FFDCA8200419877 /* WunderlistCloneUITests.swift */; };
@@ -81,6 +81,7 @@
 		6C321928FD4509675E627261 /* Pods_WunderlistClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderlistClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74ACAE1800A8A174157C51C8 /* Pods-WunderlistCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderlistCloneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderlistCloneUITests/Pods-WunderlistCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D69D624FCE5EBEF354DA26C /* Pods-WunderlistClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderlistClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderlistClone/Pods-WunderlistClone.release.xcconfig"; sourceTree = "<group>"; };
+		B724346C200C826500D16D04 /* IconKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconKey.swift; sourceTree = "<group>"; };
 		B749E595200349A500543132 /* Todo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
 		B749E59720034A4900543132 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B749E59820034A4A00543132 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		B782F86F1FFE3DDB00F03788 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		B7D9B5BE1FFDCA8100419877 /* WunderlistClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderlistClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D9B5C11FFDCA8100419877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7D9B5C31FFDCA8100419877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7D9B5C61FFDCA8100419877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7D9B5D01FFDCA8100419877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D9B5D51FFDCA8200419877 /* WunderlistCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderlistCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,7 +176,6 @@
 		B749E59D20034A5C00543132 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B7D9B5C31FFDCA8100419877 /* ViewController.swift */,
 				B7D9B6231FFE0EE400419877 /* MainSignInViewController.swift */,
 				B782F8541FFE17C700F03788 /* SignInViewController.swift */,
 				B7D9B6251FFE0EEF00419877 /* SignUpViewController.swift */,
@@ -302,6 +301,7 @@
 				B782F8691FFE209700F03788 /* AppKey.swift */,
 				B782F8671FFE209700F03788 /* InputResult.swift */,
 				B782F8681FFE209700F03788 /* View.swift */,
+				B724346C200C826500D16D04 /* IconKey.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -724,7 +724,6 @@
 				B7D9B60C1FFDD21C00419877 /* UIViewController.swift in Sources */,
 				B782F8651FFE1FF900F03788 /* CustomTextField.swift in Sources */,
 				B749E59A20034A4B00543132 /* DataModel.swift in Sources */,
-				B7D9B5C41FFDCA8100419877 /* ViewController.swift in Sources */,
 				B749E5A620034A8D00543132 /* ListDetailViewController.swift in Sources */,
 				B749E5A520034A8D00543132 /* ItemDetailViewController.swift in Sources */,
 				B749E5A720034A8D00543132 /* IconPickerViewController.swift in Sources */,
@@ -734,6 +733,7 @@
 				B782F8621FFE1FF900F03788 /* CustomButtonUpdateStatus.swift in Sources */,
 				B782F86C1FFE209700F03788 /* AppKey.swift in Sources */,
 				B782F8661FFE1FF900F03788 /* CustomLabelAddPhoto.swift in Sources */,
+				B724346D200C826500D16D04 /* IconKey.swift in Sources */,
 				B7D9B61C1FFDD40400419877 /* BaseViewController.swift in Sources */,
 				B782F86A1FFE209700F03788 /* InputResult.swift in Sources */,
 				B782F85B1FFE1F1200F03788 /* BaseNavigationController.swift in Sources */,

@@ -23,18 +23,18 @@ class ChecklistItem: NSObject, NSCoding {
         super.init()
     }
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(text, forKey: "Text")
-        aCoder.encode(checked, forKey: "Checked")
-        aCoder.encode(dueDate, forKey: "DueDate")
-        aCoder.encode(shouldRemind, forKey: "ShouldRemind")
-        aCoder.encode(itemID, forKey: "ItemID")
+        aCoder.encode(text, forKey: AppKey.ChecklistItem.text)
+        aCoder.encode(checked, forKey: AppKey.ChecklistItem.checked)
+        aCoder.encode(dueDate, forKey: AppKey.ChecklistItem.dueDate)
+        aCoder.encode(shouldRemind, forKey: AppKey.ChecklistItem.shouldRemind)
+        aCoder.encode(itemID, forKey: AppKey.ChecklistItem.itemID)
     }
     required init?(coder aDecoder: NSCoder) {
-        text = aDecoder.decodeObject(forKey: "Text") as? String
-        checked = aDecoder.decodeBool(forKey: "Checked")
-        dueDate = (aDecoder.decodeObject(forKey: "DueDate") as? Date)!
-        shouldRemind = aDecoder.decodeBool(forKey: "ShouldRemind")
-        itemID = aDecoder.decodeInteger(forKey: "ItemID")
+        text = aDecoder.decodeObject(forKey: AppKey.ChecklistItem.text) as? String
+        checked = aDecoder.decodeBool(forKey: AppKey.ChecklistItem.checked)
+        dueDate = (aDecoder.decodeObject(forKey: AppKey.ChecklistItem.dueDate) as? Date)!
+        shouldRemind = aDecoder.decodeBool(forKey: AppKey.ChecklistItem.shouldRemind)
+        itemID = aDecoder.decodeInteger(forKey: AppKey.ChecklistItem.itemID)
         super.init()
     }
     func scheduleNotification() {

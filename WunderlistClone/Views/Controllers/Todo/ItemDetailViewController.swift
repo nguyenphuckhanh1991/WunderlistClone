@@ -28,7 +28,7 @@ class ItemDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let item = itemToEdit {
-            title = "Edit Item"
+            title = Storyboard.TitleView.editItem
             textField.text = item.text
             doneBarButton.isEnabled = true
             shouldRemindSwitch.isOn = item.shouldRemind

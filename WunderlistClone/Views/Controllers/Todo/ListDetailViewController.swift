@@ -17,13 +17,13 @@ class ListDetailViewController: UITableViewController {
     @IBOutlet weak private var textField: UITextField!
     @IBOutlet weak private var doneBarButton: UIBarButtonItem!
     @IBOutlet weak private var iconImageView: UIImageView!
-    var iconName = "Folder"
+    var iconName = IconKey.folder
     weak var delegate: ListDetailViewControllerDelegate?
     var checklistToEdit: Checklist?
     override func viewDidLoad() {
         super.viewDidLoad()
         if let checklist = checklistToEdit {
-            title = "Edit Checklist"
+            title = Storyboard.TitleView.editChecklist
             textField.text = checklist.name
             doneBarButton.isEnabled = true
             iconName = checklist.iconName!
@@ -35,6 +35,7 @@ class ListDetailViewController: UITableViewController {
         textField.becomeFirstResponder()
         doneBarButton.isEnabled = false
     }
+    // MARK: - Button Functions
     @IBAction func cancel() {
         delegate?.listDetailViewControllerDidCancel(self)
     }
@@ -50,6 +51,7 @@ class ListDetailViewController: UITableViewController {
             dismiss(animated: true, completion: nil)
         }
     }
+    // MARK: - Functions
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if indexPath.section == 1 {
             return indexPath
@@ -58,7 +60,7 @@ class ListDetailViewController: UITableViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PickIcon" {
+        if segue.identifier == AppKey.SegueIdentifier.PickIcon {
             if let controller = segue.destination as? IconPickerViewController {
                 controller.delegate = self
             }
@@ -74,6 +76,7 @@ extension ListDetailViewController: UITextFieldDelegate {
         return true
     }
 }
+// MARK: IconPickerViewControllerDelegate
 extension ListDetailViewController: IconPickerViewControllerDelegate {
     func iconPicker(_ picker: IconPickerViewController, didPick iconName: String) {
         self.iconName = iconName

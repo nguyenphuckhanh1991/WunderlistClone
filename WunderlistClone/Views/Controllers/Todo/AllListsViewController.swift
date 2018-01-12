@@ -20,7 +20,7 @@ class AllListsViewController: UIViewController {
         let index = dataModel.indexOfSelectedChecklist
         if index >= 0 && index < dataModel.lists.count {
             let checklist = dataModel.lists[index]
-            performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+            performSegue(withIdentifier: AppKey.SegueIdentifier.ShowChecklist, sender: checklist)
         }
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -30,7 +30,7 @@ class AllListsViewController: UIViewController {
     }
     // MARK: Functions
     func makeCell(for tableView: UITableView) -> UITableViewCell {
-        let cellIdentifier = "Cell"
+        let cellIdentifier = Storyboard.CellIdentifier.cell
         if let cell =
             tableView.dequeueReusableCell(withIdentifier: cellIdentifier) {
             return cell
@@ -39,11 +39,11 @@ class AllListsViewController: UIViewController {
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowChecklist" {
+        if segue.identifier == AppKey.SegueIdentifier.ShowChecklist {
             if let controller = segue.destination as? ChecklistViewController {
                 controller.checklist = sender as? Checklist
             }
-        } else if segue.identifier == "AddChecklist" {
+        } else if segue.identifier == AppKey.SegueIdentifier.AddChecklist {
             if let navigationController = segue.destination as? UINavigationController {
                 let controller = navigationController.topViewController as? ListDetailViewController
                 controller?.delegate = self
@@ -64,11 +64,11 @@ extension AllListsViewController: UITableViewDataSource {
         cell.accessoryType = .detailDisclosureButton
         let count = checklist.countUncheckedItems()
         if checklist.items.count == 0 {
-            cell.detailTextLabel!.text = "(No Items)"
+            cell.detailTextLabel!.text = AppKey.LabelText.noItems
         } else if count == 0 {
-            cell.detailTextLabel!.text = "All Done!"
+            cell.detailTextLabel!.text = AppKey.LabelText.allDone
         } else {
-            cell.detailTextLabel!.text = "\(count) Remaining"
+            cell.detailTextLabel!.text = "\(count) App"
         }
         cell.imageView?.image = UIImage(named: checklist.iconName!)
         return cell
@@ -80,7 +80,7 @@ extension AllListsViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if let navigationController = storyboard!.instantiateViewController(
-            withIdentifier: "ListDetailNavigationController")
+            withIdentifier: Storyboard.NavigationControllerIdentifier.listDetailNavigationController)
             as? UINavigationController {
             if let controller = navigationController.topViewController
                 as? ListDetailViewController {
@@ -97,9 +97,10 @@ extension AllListsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dataModel.indexOfSelectedChecklist = indexPath.row
         let checklist = dataModel.lists[indexPath.row]
-        performSegue(withIdentifier: "ShowChecklist", sender: checklist)
+        performSegue(withIdentifier: AppKey.SegueIdentifier.ShowChecklist, sender: checklist)
     }
 }
+// MARK: ListDetailViewControllerDelegate
 extension AllListsViewController: ListDetailViewControllerDelegate {
     func listDetailViewControllerDidCancel(_ controller: ListDetailViewController) {
         dismiss(animated: true, completion: nil)
@@ -116,6 +117,7 @@ extension AllListsViewController: ListDetailViewControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
 }
+// MARK: UINavigationControllerDelegate
 extension AllListsViewController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if viewController === self {

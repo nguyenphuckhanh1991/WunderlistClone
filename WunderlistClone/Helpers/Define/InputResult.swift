@@ -24,7 +24,7 @@ struct InputResult {
         static let actionTitle              = "Close"
     }
     struct ActionSheet {
-        static let chooseAvatar                = "Choose from Gallery"
+        static let chooseAvatar             = "Choose from Gallery"
         static let takePhoto                = "Take a Photo"
         static let cancel                   = "Cancel"
     }
@@ -34,5 +34,15 @@ struct InputResult {
         static let emailMessage             = "Email must be filled!"
         static let phoneMessage             = "Phone must be filled!"
         static let actionTitle              = "Close"
+    }
+    struct TitleText {
+        static let titleScreen1             = "Get stuff done easily"
+        static let titleScreen2             = "Collaborate with anyone"
+        static let titleScreen3             = "Free on all your devices"
+    }
+    struct ContentText {
+        static let contentText1             = "Organize your work, share a shopping list or plan your next trip with Wunderlist."
+        static let contentText2             = "Ask a question, leave feedback and add Comments to any of your-to-dos."
+        static let contentText3             = "No matter where you are, Wunderlist is the easiest to get stuff done."
     }
 }
